@@ -5,6 +5,7 @@ const SkillPage = () => {
     <div>
       <div className={style.contents_title}>
         <h1 className={style.h1}>skill_</h1>
+        <p>learned and written 👩🏻‍💻</p>
       </div>
       <div className={style.contents_skill_main}>
         <div className={style.skill_card}>
