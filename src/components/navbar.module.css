@@ -35,6 +35,7 @@
 .navbar {
   display: flex;
   align-items: center;
+  justify-content: center;
   height: 8vw;
   font-family: "Godo";
   padding: 2vh;
@@ -43,7 +44,6 @@
 .navbar ul {
   display: flex block;
   gap: 8.5vw;
-  margin: 0 auto;
   justify-content: center;
   align-items: center;
 }
@@ -88,7 +88,7 @@
 .logo img {
   /* display: none; */
   cursor: pointer;
-  height: 4vh;
+  height: 3vh;
 }
 
 .modal {
@@ -208,7 +208,30 @@
 
 .contents_about_emoji_1 p {
   font-size: 5vw;
-  rotate: -25deg;
+  transform: rotate(-25deg);
+  transition: transform 0.3s ease;
+}
+
+.contents_about_emoji_1 p.active {
+  animation: swing 1.2s ease-in-out infinite;
+}
+
+@keyframes swing {
+  0% {
+    transform: rotate(-25deg);
+  }
+  25% {
+    transform: rotate(-5deg);
+  }
+  50% {
+    transform: rotate(-25deg);
+  }
+  75% {
+    transform: rotate(-45deg);
+  }
+  100% {
+    transform: rotate(-25deg);
+  }
 }
 
 .contents_about_emoji_2 {
@@ -237,11 +260,29 @@
   font-family: "Cafe24SsurroundAir";
   border-left: solid 5px #646464;
   background: #f5f5f5;
+  opacity: 0;
+  transform: translateY(30px);
+  transition: all 0.8s ease-in-out;
 }
 
-.contents_about_introduce span {
+.contents_about_introduce.active {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.contents_about_introduce p {
+  line-height: 2.5vh;
+}
+
+.span_yellow {
   font-weight: bolder;
   background-color: rgba(255, 255, 0, 0.393);
+}
+
+.span_bottom {
+  font-weight: bold;
+  border-bottom: solid 1px #000;
+  color: #646464;
 }
 
 .about_tag {
@@ -258,6 +299,11 @@
   border-radius: 10px;
   /* border: solid 1.5px; */
   background-color: #fff;
+  transition: transform 1s ease;
+}
+
+.about_tag p:hover {
+  transform: scale(1.2);
 }
 
 .main_wrap {
@@ -343,8 +389,9 @@
   min-width: 200px;
   max-width: 30vw;
   padding: 20px;
-  background-color: #f0f8ff;
+  box-shadow: 0px 0px 3px 1px #c0c0c0;
   border-radius: 10px;
+  background-color: #fff;
 }
 
 .project_img_box {
@@ -441,12 +488,12 @@
     align-items: center;
     height: 8vw;
     font-family: "Godo";
+    gap: 4vw;
   }
 
   .navbar ul {
     display: flex block;
     gap: 8.5vw;
-    margin: 0 auto;
     justify-content: center;
     align-items: center;
   }
@@ -519,7 +566,7 @@
   }
 
   .contents_about_introduce {
-    font-size: 1.5vw;
+    font-size: 1.2vw;
   }
 
   .about_tag {
