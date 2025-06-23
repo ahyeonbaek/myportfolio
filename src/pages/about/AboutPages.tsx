@@ -1,10 +1,13 @@
-import style from "../../components/navbar.module.css";
+import style from "../../css/page.module.css";
+import { useRefContext } from "../../context/ref";
 import useIntersection from "../../hook/useIntersection";
 const AboutPage = () => {
   const { ref, isIntersecting } = useIntersection({ threshold: 0.3 });
 
+  const { aboutRef } = useRefContext();
+
   return (
-    <div ref={ref}>
+    <div ref={aboutRef} className={style.contents_wrap}>
       <div className={style.contents_title}>
         <h1 className={style.h1}>about_</h1>
         <p>introduce myself 🪴</p>

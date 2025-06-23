@@ -1,8 +1,10 @@
-import style from "../../components/navbar.module.css";
+import style from "../../css/page.module.css";
+import { useRefContext } from "../../context/ref";
 
 const SkillPage = () => {
+  const { skillRef } = useRefContext();
   return (
-    <div>
+    <div ref={skillRef} className={style.contents_wrap}>
       <div className={style.contents_title}>
         <h1 className={style.h1}>skill_</h1>
         <p>learned and written 👩🏻‍💻</p>
