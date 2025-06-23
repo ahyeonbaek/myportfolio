@@ -7,15 +7,10 @@ export const router = createBrowserRouter(
     {
       path: "/",
       element: <App />,
-      // children: [
-      //   {
-      //     path: "/",
-      //     element: <MainPage />,
-      //   },
-      // ],
+      children: [{ path: "/", element: <MainPage /> }],
     },
-  ],
-  {
-    basename: "/myportfolio",
-  }
+  ]
+  // {
+  //   basename: "/myportfolio",
+  // }
 );
