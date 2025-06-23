@@ -32,6 +32,14 @@
   font-style: normal;
 }
 
+@font-face {
+  font-family: "Pretendard-Regular";
+  src: url("https://fastly.jsdelivr.net/gh/Project-Noonnu/noonfonts_2107@1.1/Pretendard-Regular.woff")
+    format("woff");
+  font-weight: 400;
+  font-style: normal;
+}
+
 .navbar {
   display: flex;
   align-items: center;
@@ -85,402 +93,28 @@
   /* margin: 21vw auto 0; */
 }
 
+.container_dark {
+  background-color: #000;
+}
+
 .logo img {
   /* display: none; */
   cursor: pointer;
   height: 3vh;
 }
 
-.modal {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100vw;
-  height: 100vh;
-  z-index: 1000;
-}
-
-.backdrop {
-  position: fixed;
-  top: 0;
-  left: 0;
-  bottom: 0;
-  right: 0;
-  /* background-color: rgba(0, 0, 0, 0.5); */
-  z-index: 1000;
-}
-
-.trigger {
-  height: 10vw;
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  display: flex;
-  align-items: center;
-}
-
-.trigger img {
-  width: 5vw;
-  padding: 10px;
-}
-
-.modal_content {
-  position: fixed;
-  top: 0;
-  left: 0;
-  bottom: 0;
-  right: 0;
-  z-index: 10000;
-  background-color: #fff;
-  transform: translate(-50%, -50%);
-}
-
-.modal_content div {
-  display: flex;
-  justify-content: right;
-  padding-bottom: 10px;
-  padding-right: 5px;
-}
-
-/* .navbar ul {
-  display: none;
-} */
-
 .h1 {
   font-size: 5vw;
   font-family: "Godo";
 }
 
-.contents_wrap {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  padding: 4vw 2vw;
-  border-top: dotted 3px #000;
-  gap: 5vw;
-}
-
-.contents_title {
-  display: flex;
-  align-items: end;
-  gap: 3vw;
-  width: 100%;
-}
-
-.contents_about_title p {
-  padding-bottom: 1vw;
-  font-size: 2vw;
-  font-family: "Godo";
-}
-
-.contents_about_main {
-  display: flex;
-  align-items: center;
-  flex-direction: column;
-  margin: 0 auto;
-  width: 100%;
-  gap: 5vw;
-  padding: 10vw 0;
-}
-
-.about_profile_main {
-  display: flex;
-  align-items: center;
-  flex-direction: column;
-}
-
-.contents_about_img {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  flex-direction: column;
-  width: 13vw;
-  height: 15vw;
-  gap: 5vw;
-}
-
-.contents_about_emoji_1 {
-  display: flex;
-  justify-content: start;
-  align-items: start;
-}
-
-.contents_about_emoji_1 p {
-  font-size: 5vw;
-  transform: rotate(-25deg);
-  transition: transform 0.3s ease;
-}
-
-.contents_about_emoji_1 p.active {
-  animation: swing 1.2s ease-in-out infinite;
-}
-
-@keyframes swing {
-  0% {
-    transform: rotate(-25deg);
-  }
-  25% {
-    transform: rotate(-5deg);
-  }
-  50% {
-    transform: rotate(-25deg);
-  }
-  75% {
-    transform: rotate(-45deg);
-  }
-  100% {
-    transform: rotate(-25deg);
-  }
-}
-
-.contents_about_emoji_2 {
-  display: flex;
-  align-items: end;
-  justify-content: right;
-}
-
-.contents_about_emoji_2 p {
-  font-size: 5vw;
-  rotate: 25deg;
-}
-
-.contents_about_img img {
-  width: 15vw;
-}
-
-.contents_about_introduce {
-  display: flex;
-  justify-content: center;
-  flex-direction: column;
-  gap: 3vw;
-  width: 55vw;
-  padding: 10px 35px;
-  font-size: 2vw;
-  font-family: "Cafe24SsurroundAir";
-  border-left: solid 5px #646464;
-  background: #f5f5f5;
-  opacity: 0;
-  transform: translateY(30px);
-  transition: all 0.8s ease-in-out;
-}
-
-.contents_about_introduce.active {
-  opacity: 1;
-  transform: translateY(0);
-}
-
-.contents_about_introduce p {
-  line-height: 2.5vh;
-}
-
-.span_yellow {
-  font-weight: bolder;
-  background-color: rgba(255, 255, 0, 0.393);
-}
-
-.span_bottom {
-  font-weight: bold;
-  border-bottom: solid 1px #000;
-  color: #646464;
-}
-
-.about_tag {
-  display: flex;
-  justify-content: center;
-  flex-wrap: wrap;
-  gap: 3vw;
-  padding-top: 3vw;
-}
-
-.about_tag p {
-  font-size: 1.5vw;
-  padding: 1vw;
-  border-radius: 10px;
-  /* border: solid 1.5px; */
-  background-color: #fff;
-  transition: transform 1s ease;
-}
-
-.about_tag p:hover {
-  transform: scale(1.2);
-}
-
-.main_wrap {
-  height: 75vh;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  flex-direction: column;
-  gap: 10vw;
-
-  font-family: "HakgyoansimPuzzleTTF-Outline";
-  box-sizing: border-box;
-  text-align: center;
-}
-
-.main_wrap h1 {
-  font-size: 5vw;
-}
-
-.char {
-  display: inline-block;
-  opacity: 0;
-  transform: translateY(20px);
-  animation: fadeUp 0.5s forwards;
-}
-
-@keyframes fadeUp {
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
-}
-
-.main_wrap p {
-  /* position: absolute;
-  left: 20px;
-  font-size: 10vw; */
-  font-family: "GangwonEduPowerExtraBoldA";
-  font-size: 3vw;
-}
-
-.main_wrap a {
-  font-size: 5vw;
-  cursor: pointer;
-  animation: bounceTwiceWithPause 3s ease-in-out 2s infinite;
-  animation-delay: 2s; /* h1 애니 끝나고 시작 (2초 뒤) */
-  animation-iteration-count: infinite;
-  animation-timing-function: ease-in-out;
-  animation-direction: normal;
-}
-
-@keyframes bounceTwiceWithPause {
-  0%,
-  100% {
-    transform: translateY(0);
-  }
-  10% {
-    transform: translateY(-10px);
-  }
-  20% {
-    transform: translateY(0);
-  }
-  30% {
-    transform: translateY(-7px);
-  }
-  40% {
-    transform: translateY(0);
-  }
-  /* 40% ~ 100% 구간은 아무 일도 없음 = 쉬는 시간 */
-}
-
-/* #project */
-.contents_project_main {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  width: 100%;
-  padding: 5vw 0;
-  gap: 2vw;
-}
-
-.project_card {
-  min-width: 200px;
-  max-width: 30vw;
-  padding: 20px;
-  box-shadow: 0px 0px 3px 1px #c0c0c0;
-  border-radius: 10px;
-  background-color: #fff;
-}
-
-.project_img_box {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  min-width: 200px;
-  max-width: 45vw;
-}
-
-.project_img_box img {
-  width: 100%;
-}
-
-.contents_project_introduce {
-  font-family: "Cafe24SsurroundAir";
-}
-
-.contents_project_introduce h2 {
-  font-size: 20px;
-  font-family: "Godo";
-}
-
-/* skill */
-.contents_skill_main {
-  display: flex;
-  flex-direction: column;
-  gap: 5vw;
-}
-.skill_img_wrap {
-  width: 100%;
-  border-radius: 10px;
-
-  display: flex;
-  gap: 2vw;
-  flex-wrap: wrap;
-}
-
-.skill_img_wrap div {
-  min-width: 40px;
-  min-height: 40px;
-  max-width: 5vw;
-  border-radius: 10px;
-  box-shadow: 1px 1px 4px 2px #f5f5f5;
-}
-
-.skill_img_wrap img {
-  width: 100%;
-}
-
 @media (min-width: 768px) {
-  .modal {
-    display: none;
-  }
-
   .container {
     margin: 0 auto;
   }
 
   .h1 {
     font-size: 3.5vw;
-  }
-
-  .contents_about_main {
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    margin: 0 auto;
-    width: 100%;
-    gap: 5vw;
-    padding: 10vw 0;
-  }
-
-  .contents_about_emoji_1 {
-    display: flex;
-    justify-content: start;
-    align-items: start;
-    height: 100%;
-  }
-
-  .contents_about_emoji_2 {
-    display: flex;
-    align-items: end;
-
-    height: 100%;
-  }
-
-  .contents_about_title p {
-    font-size: 1.5vw;
   }
 
   .navbar {
@@ -534,42 +168,10 @@
     display: block;
     height: 5vh;
   }
-
-  .contents_about_img img {
-    width: 13vw;
-  }
-
-  .main_wrap {
-    padding-top: 6vw;
-  }
-
-  .main_wrap h1 {
-    font-size: 6vw;
-  }
 }
 
 @media (min-width: 1024px) {
   .navbar ul li a {
     font-size: 1.5vw;
-  }
-
-  .main_wrap {
-    font-size: 5vw;
-    height: 85vh;
-  }
-  .main_wrap h1 {
-    font-size: 4.5vw;
-  }
-
-  .main_wrap a {
-    font-size: 4vw;
-  }
-
-  .contents_about_introduce {
-    font-size: 1.2vw;
-  }
-
-  .about_tag {
-    font-size: 1vw;
   }
 }
