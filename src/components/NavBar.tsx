@@ -16,7 +16,7 @@ const NavBar = () => {
         <div className={style.navbar}>
           <div className={style.logo}>
             <img
-              src="/img/logo.png"
+              src={`${import.meta.env.BASE_URL}img/logo.png`}
               alt="포트폴리오 로고버튼"
               onClick={() => navigate("/")}
             />
