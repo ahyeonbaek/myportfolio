@@ -1,6 +1,7 @@
 import style from "../../css/page.module.css";
 import { useRefContext } from "../../context/ref";
 import useIntersection from "../../hook/useIntersection";
+
 const AboutPage = () => {
   const { ref, isIntersecting } = useIntersection({ threshold: 0.3 });
 
@@ -21,7 +22,10 @@ const AboutPage = () => {
               </p>
             </div>
             <div className={style.contents_about_img}>
-              <img src="/img/me.JPG" alt="프로필 사진" />
+              <img
+                src={`${import.meta.env.BASE_URL}img/me.JPG`}
+                alt="프로필 사진"
+              />
             </div>
             <div className={style.contents_about_emoji_2}>
               <p>🖇️</p>
