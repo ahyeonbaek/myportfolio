@@ -45,7 +45,7 @@ const SkillPage = () => {
             </div>
             <div>
               <img
-                src="`${import.meta.env.BASE_URL}img/MongoDB.png"
+                src={`${import.meta.env.BASE_URL}img/MongoDB.png`}
                 alt="MongoDB 로고 이미지"
               />
             </div>
