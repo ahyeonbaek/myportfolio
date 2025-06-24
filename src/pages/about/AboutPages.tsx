@@ -64,12 +64,12 @@ const AboutPage = () => {
             웹페이지 디자인, 제작을 시작으로, <br />
             프론트엔드 분야에 흥미를 느끼게 되었습니다. <br />
             주로{" "}
-            <span className={style.span_bottom}>
+            <span className={style.span_yellow}>
               vite 환경에서 react typescript
             </span>{" "}
             로 <br />
             작업하였고,{" "}
-            <span className={style.span_bottom}>
+            <span className={style.span_yellow}>
               사용친화적인 react ui컴포넌트를
             </span>{" "}
             <br />
@@ -77,11 +77,11 @@ const AboutPage = () => {
             또한 엘리스 리액트 트랙2기를 수료하며,
             <br />
             진행했던{" "}
-            <span className={style.span_bottom}>
+            <span className={style.span_yellow}>
               팀 프로젝트에서 협업하는 방식
             </span>
             과 <br />
-            <span className={style.span_bottom}>서버와의 통신 흐름</span>을
+            <span className={style.span_yellow}>서버와의 통신 흐름</span>을
             익혔습니다.
           </p>
           <p>
